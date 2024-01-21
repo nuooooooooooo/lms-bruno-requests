@@ -1,0 +1,19 @@
+meta {
+  name: Get token
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{keycloak}}/java-2023-10/protocol/openid-connect/token
+  body: formUrlEncoded
+  auth: bearer
+}
+
+body:form-urlencoded {
+  username: coach
+  password: coach
+  grant_type: password
+  client_id: switchfully-lms
+  client_secret: Z8kzdqRzPcfWZENlvPebAo3UCjeiQ0UZ
+}
